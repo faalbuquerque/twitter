@@ -1,6 +1,5 @@
 
 
-
 function twittar(){
 
     let textTwitter= document.querySelector(".write-text").value;
