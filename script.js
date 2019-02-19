@@ -1,17 +1,56 @@
 
+function createElement(){
 
-function twittar(){
+    let newElement= document.createElement("textarea")
 
-    let textTwitter= document.querySelector(".write-twit").value;
-    let getText = document.querySelector(".print-twit")
-    getText.innerHTML = textTwitter  
+    let textoNovo= document.createTextNode("Testando!")
+    newElement.appendChild(textoNovo);
+
+    let formAtual= document.getElementById("form-printar")
+    
+    document.body.insertBefore(textoNovo, formAtual)
+  
 }
 
 
+function twittar(){
+
+    let textTwitter= document.querySelector(".write-twit").value
+    let getText = document.querySelector(".print-twit")
+
+    return getText.innerHTML = textTwitter 
+ 
+}
 
 
+/*
 
+function twittar(){
 
+    let textTwitter= document.querySelector(".write-twit").value
+
+    let getText = document.querySelector(".print-twit")
+
+    return getText.innerHTML = textTwitter 
+ 
+}
+
+-------------------------------------------------------
+document.body.onload = adcElemento;
+
+<div id="div1">O texto acima foi criado dinamicamente.</div>
+
+function adcElemento () { 
+  // cria um novo elemento div 
+  // e dá à ele conteúdo
+  var divNova = document.createElement("div"); 
+  var conteudoNovo = document.createTextNode("Olá, cumprimentos!"); 
+  divNova.appendChild(conteudoNovo); //adiciona o nó de texto à nova div criada 
+
+  // adiciona o novo elemento criado e seu conteúdo ao DOM 
+  var divAtual = document.getElementById("div1"); 
+  document.body.insertBefore(divNova, divAtual); 
+} */
 
 
 

@@ -1,3 +1,15 @@
+body{
+    margin: 0;
+    color: #14171a;
+}
+.title-twitter{
+    display: flex;
+    justify-content: center;
+    background-color: #1DA1F2
+}
 
+.title-twitter h1{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
 
-/* #14171a*/

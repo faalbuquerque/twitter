@@ -9,23 +9,24 @@
 </head>
 <body>
     
-    <header>
+    <header class="title-twitter">
         <h1>Twitter</h1>
     </header>
 
-    <section class= "box-tweetar">
-        <form class= "form-tweettar" method="get"></form>
-            <h1 id="title-tweettar"> Escreva o seu texto: </h1>
-            <textarea class= "write-twit" maxlength="150"></textarea>
-            <input type="button" value= "Tweet" onclick= "twittar()"  />
+    <section class= "box-twitter">
+
+        <form class= "form-tweettar" method="get">
+            <textarea class= "write-twit"  placeholder="Digite o seu texto"  maxlength="150"></textarea>
+            <input type="button" value= "Tweet" onclick="twittar()"/>
         </form>
-        
-        <form class="form-print" method= "post">
+
+        <form id="form-printar" method= "post">
             <textarea class= "print-twit"></textarea>
         </form>
+
     </section>
 
-    
+
 
 
 <script type="text/javascript" src="script.js"></script>   
