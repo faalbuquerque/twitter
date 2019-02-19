@@ -2,19 +2,10 @@
 
 function twittar(){
 
-    let textTwitter= document.querySelector(".write-text").value;
-
-
-
-
-
-
-
-
-    
-    return document.write("Texto digitado: " + textTwitter)
+    let textTwitter= document.querySelector(".write-twit").value;
+    let getText = document.querySelector(".print-twit")
+    getText.innerHTML = textTwitter  
 }
-
 
 
 

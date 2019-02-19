@@ -8,23 +8,25 @@
     <title>Twitter</title>
 </head>
 <body>
+    
     <header>
         <h1>Twitter</h1>
     </header>
 
-    <section class= "form-tweetar">
-        <form class= "twittar" method= "post"></form>
-            <h1> Escreva o seu texto: </h1>
+    <section class= "box-tweetar">
+        <form class= "form-tweettar" method="get"></form>
+            <h1 id="title-tweettar"> Escreva o seu texto: </h1>
             <textarea class= "write-twit" maxlength="150"></textarea>
-            <input type="button" value= "Tweet" onclick= "tweettar()"  />
+            <input type="button" value= "Tweet" onclick= "twittar()"  />
+        </form>
+        
+        <form class="form-print" method= "post">
+            <textarea class= "print-twit"></textarea>
         </form>
     </section>
 
-    <section class= "form-twit">
-        <form class= "twittado" method= "post"></form>
-             <textarea class= twittado"></textarea>
-        </form>
-    </section>
+    
+
 
 <script type="text/javascript" src="script.js"></script>   
 </body>
