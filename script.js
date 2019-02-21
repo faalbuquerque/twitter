@@ -13,7 +13,7 @@ function criarTweet(){
 
 function limparTweet(){
     document.querySelector(".btn-twittar").disabled= true
-    document.getElementById("tweet").value= ""
+    document.getElementById("tweet").value= " "
     document.getElementById("contador").innerHTML= 140
 }
 
@@ -26,6 +26,9 @@ function contaCaracteres(){
     let tamanho= 140 - tweets;
     document.getElementById("contador").innerHTML= tamanho
 
+    if(tweets < 120 && tweets <= 129){
+        contador.style.color= "#000"
+    }
     if(tweets >= 120 && tweets <= 129){
         contador.style.color= "#FFA500"
     }

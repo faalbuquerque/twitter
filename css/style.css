@@ -1,9 +1,10 @@
-body{
+.corpo{
     margin: 0;
     padding: 0;
-    color: #14171a;
     background-color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
 }
+
 .title-twitter{
     background-color: #1DA1F2;
     display: flex;
@@ -11,10 +12,35 @@ body{
 }
 
 .title-twitter h1{
-    font-family: Arial, Helvetica, sans-serif;
     color: white;
 }
 
+.box-twitter{
+    display: flex;
+    justify-content: center;
+}
+
+textarea{
+    margin: 5px;
+    padding: 10px;
+    border: 2px solid #1DA1F2;
+    resize: none;
+    height: 120px;
+    width: 380px;
+    text-align: start;
+}
+
+
 #contador{
-    font-size: 50px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: bold;   
+}
+
+.btn-twittar{
+    border-radius: 5px;
+    padding: 8px;
+    width: 60px;
+    border: none;
+
 }
