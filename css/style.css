@@ -1,14 +1,20 @@
 .corpo{
     margin: 0;
     padding: 0;
-    background-color: whitesmoke;
     font-family: Arial, Helvetica, sans-serif;
+    background-image: url("../images/logo.png");
+    background-repeat: no-repeat;
+    background-color: #E8F5FD;
 }
 
 .title-twitter{
     background-color: #1DA1F2;
     display: flex;
     justify-content: center;
+    background-image: url("../images/twitter-logo-white.png");
+    background-repeat: no-repeat;
+    background-size: 10%;
+    background-position: 500px;
 }
 
 .title-twitter h1{
@@ -17,30 +23,43 @@
 
 .box-twitter{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    flex-direction: column; 
 }
 
 textarea{
     margin: 5px;
+    margin-left: 35%;
     padding: 10px;
-    border: 2px solid #1DA1F2;
+    border: 1px solid #4AB3F4;
+    border-radius: 10px;
     resize: none;
     height: 120px;
     width: 380px;
-    text-align: start;
+    text-align: center;
+    outline: none;    
 }
-
 
 #contador{
     margin-bottom: 10px;
+    margin-left: 36%;
     font-size: 15px;
     font-weight: bold;   
 }
 
 .btn-twittar{
-    border-radius: 5px;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-left: 36%;
     padding: 8px;
     width: 60px;
     border: none;
+    background-color: #4AB3F4;
+    color: white;
+    outline: none;  
+}
 
+.btn-twittar:hover{
+    background-color: #1DA1F2;
+    border-radius: 10px;
 }
