@@ -7,7 +7,10 @@ function twittar(){
 
 function criarTweet(){
     let elemento= document.createElement("textarea")
-    elemento.textContent= twittar()
+    let hora= document.createElement("p")
+    hora.textContent= horario()
+    elemento.textContent= twittar() 
+    document.body.appendChild(hora)
     document.body.appendChild(elemento)
 }
 
@@ -55,3 +58,16 @@ function contaCaracteres(){
 let tweet= document.getElementById("tweet")
 tweet.addEventListener("keyup", contaCaracteres)
 tweet.addEventListener("keyup", desabilitaOuNao)
+
+
+
+function horario(){
+   let hora= new Date().getHours()
+   let minuto= new Date().getMinutes()
+
+   if(minuto < 10){
+       minuto= "0" + minuto
+   }    
+
+   return hora + ":" + minuto
+}
