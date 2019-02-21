@@ -1,92 +1,54 @@
-
-function createElement(){
-
-    let newElement= document.createElement("textarea")
-
-    let textoNovo= document.createTextNode("Testando!")
-    newElement.appendChild(textoNovo);
-
-    let formAtual= document.getElementById("form-printar")
-    
-    document.body.insertBefore(textoNovo, formAtual)
-  
-}
-
+document.querySelector(".btn-twittar").disabled= true
 
 function twittar(){
-
-    let textTwitter= document.querySelector(".write-twit").value
-    let getText = document.querySelector(".print-twit")
-
-    return getText.innerHTML = textTwitter 
- 
+    let tweet= document.getElementById("tweet").value
+    return tweet
 }
 
-
-/*
-
-function twittar(){
-
-    let textTwitter= document.querySelector(".write-twit").value
-
-    let getText = document.querySelector(".print-twit")
-
-    return getText.innerHTML = textTwitter 
- 
+function criarTweet(){
+    let elemento= document.createElement("textarea")
+    elemento.textContent= twittar()
+    document.body.appendChild(elemento)
 }
 
--------------------------------------------------------
-document.body.onload = adcElemento;
+function limparTweet(){
+    document.querySelector(".btn-twittar").disabled= true
+    document.getElementById("tweet").value= ""
+    document.getElementById("contador").innerHTML= 140
+}
 
-<div id="div1">O texto acima foi criado dinamicamente.</div>
+let botao= document.querySelector(".btn-twittar")
+botao.addEventListener("click", criarTweet)
+botao.addEventListener("click", limparTweet)
 
-function adcElemento () { 
-  // cria um novo elemento div 
-  // e dá à ele conteúdo
-  var divNova = document.createElement("div"); 
-  var conteudoNovo = document.createTextNode("Olá, cumprimentos!"); 
-  divNova.appendChild(conteudoNovo); //adiciona o nó de texto à nova div criada 
+function contaCaracteres(){
+    let tweets= document.getElementById("tweet").value.length
+    let tamanho= 140 - tweets;
+    document.getElementById("contador").innerHTML= tamanho
 
-  // adiciona o novo elemento criado e seu conteúdo ao DOM 
-  var divAtual = document.getElementById("div1"); 
-  document.body.insertBefore(divNova, divAtual); 
-} */
+    if(tweets >= 120 && tweets <= 129){
+        contador.style.color= "#FFA500"
+    }
+    if(tweets >= 130 && tweets <= 140){
+        contador.style.color= "#FF0000"
+    }
+    if(tweets > 140){
+        contador.style.color= "#9932CC"
+    }
+  }
 
+  function desabilitaOuNao(){
+    let texto= document.getElementById("tweet").value
+    let botao= document.querySelector(".btn-twittar")
 
+    if(texto.length > 0 && texto.length <= 140) {
+        botao.disabled= false
+    }
+    else{
+        botao.disabled= true
+    }
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-var $wrapper = document.querySelector('.wrapper'),
-    // Pega a string do conteúdo atual
-    HTMLTemporario = $wrapper.innerHTML,
-    // Novo HTML que será inserido
-    HTMLNovo = 'Teste prepend com innerHTML </br>';
-
-// Concatena as strings colocando o novoHTML antes do HTMLTemporario
-HTMLTemporario = HTMLNovo + HTMLTemporario;
-
-// Coloca a nova string(que é o HTML) no DOM
-$wrapper.innerHTML = HTMLTemporario; */
+let tweet= document.getElementById("tweet")
+tweet.addEventListener("keyup", contaCaracteres)
+tweet.addEventListener("keyup", desabilitaOuNao)

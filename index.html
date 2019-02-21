@@ -1,34 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/style.css" type="text/css"/>
-    <title>Twitter</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link rel="stylesheet" href="css/style.css" type="text/css"/>
+   <title>Twitter</title>
 </head>
 <body>
-    
-    <header class="title-twitter">
-        <h1>Twitter</h1>
-    </header>
+   <header class="title-twitter">
+      <h1>Twitter</h1>
+  </header>
+  <section class= "box-twitter">
+      <form class="twitter">
+        <textarea id="tweet" rows="5">
+        </textarea>
 
-    <section class= "box-twitter">
+        <h5 id="contador">140</h5>
 
-        <form class= "form-tweettar" method="get">
-            <textarea class= "write-twit"  placeholder="Digite o seu texto"  maxlength="150"></textarea>
-            <input type="button" value= "Tweet" onclick="twittar()"/>
-        </form>
+        <input type="button" value="Twittar" class="btn-twittar">
 
-        <form id="form-printar" method= "post">
-            <textarea class= "print-twit"></textarea>
-        </form>
-
-    </section>
-
-
-
-
-<script type="text/javascript" src="script.js"></script>   
+      </form>
+   </section>
+   <script src="script.js"></script>
 </body>
 </html>

@@ -1,11 +1,13 @@
 body{
     margin: 0;
+    padding: 0;
     color: #14171a;
+    background-color: whitesmoke;
 }
 .title-twitter{
+    background-color: #1DA1F2;
     display: flex;
     justify-content: center;
-    background-color: #1DA1F2
 }
 
 .title-twitter h1{
@@ -13,3 +15,6 @@ body{
     color: white;
 }
 
+#contador{
+    font-size: 50px;
+}
